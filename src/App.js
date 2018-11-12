@@ -3,8 +3,10 @@ import './App.css';
 
 import Header from './Header';
 import Footer from './Footer';
+import Lobby from './Lobby';
 
 import logo from './logos/Version2_US.jpg';
+import homePic from './Images/DSCN2974.jpg';
 
 const App = () => {
   return (
@@ -12,6 +14,11 @@ const App = () => {
       <Header
         logo={logo}
         />
+
+      <Lobby 
+        backgroundPic={homePic}
+      />
+      
       <Footer
         logo={logo}
       />

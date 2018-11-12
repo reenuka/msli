@@ -8,7 +8,7 @@ const Header = (props) => {
   const StyledHeader = styled.div `
     .header-logo {
       width: 300px;
-      padding: 30px;
+      padding: 10px 30px;
     }
 
     .navbar {
@@ -22,11 +22,13 @@ const Header = (props) => {
   return (
     <StyledHeader>
       <img className="header-logo" src={props.logo} alt="logo" />
+
       <div className="navbar">
         <NavBar
           children={pages}
         />
       </div>
+
     </StyledHeader>
   );
 }
