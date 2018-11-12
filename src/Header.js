@@ -2,25 +2,31 @@ import React from 'react';
 import styled from 'styled-components';
 
 import NavBar from './NavBar';
-import logo from './logos/Version2_US.jpg';
 
-const Header = () => {
+const Header = (props) => {
 
   const StyledHeader = styled.div `
-    .logo {
+    .header-logo {
       width: 300px;
+      padding: 30px;
+    }
+
+    .navbar {
+      float: right;
       padding: 30px;
     }
   `
   
-  const pages = ['donate', 'gallery', 'our work', 'who we are']
+  const pages = ['donate', 'gallery', 'our work', 'who we are'];
 
   return (
     <StyledHeader>
-      <img className="logo" src={logo} alt="logo" />
-      <NavBar 
-        children={pages}
-      />
+      <img className="header-logo" src={props.logo} alt="logo" />
+      <div className="navbar">
+        <NavBar
+          children={pages}
+        />
+      </div>
     </StyledHeader>
   );
 }

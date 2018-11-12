@@ -10,16 +10,18 @@ const NavBar = (props) => {
     overflow: hidden;
   
     li {
-      float: right;
-      color: orange;
-      display: block;
+      font-size: 12px;
+      color: rgb(40, 60, 15);
+      display: inline;
       text-align: center;
       padding: 14px 16px;
+      margin: 0;
+      line-height: 30px;
       text-decoration: none;
     }
 
     li:hover {
-        background-color: #111;
+      background-color: rgb(249, 223, 12);
     }
   `
 

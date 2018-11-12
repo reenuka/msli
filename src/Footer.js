@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import logo from './logos/Version2_US.jpg';
-
-const Footer = () => {
+const Footer = (props) => {
   const StyledFooter = styled.div`
     color: magenta;
 
@@ -11,7 +9,7 @@ const Footer = () => {
       border: 2px solid rgb(40, 60, 15);
     }
 
-    .logo {
+    .footer-logo {
       width: 300px;
       float: left;
       padding: 30px;
@@ -28,7 +26,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <hr />
-      <img className="logo" src={logo} alt="logo" />
+      <img className="footer-logo" src={props.logo} alt="logo" />
       <p className="already-on-this-site">www.mozambiqueschoollunchinitiative.com</p>
     </StyledFooter>
   );
