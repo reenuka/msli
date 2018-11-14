@@ -22,6 +22,7 @@ const NavBar = (props) => {
 
     li:hover {
       background-color: rgb(249, 223, 12);
+      cursor: pointer;
     }
   `
 
