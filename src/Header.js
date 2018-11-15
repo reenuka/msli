@@ -1,18 +1,22 @@
 import React from 'react';
+
 import styled from 'styled-components';
+import { Container, Row, Col } from 'react-grid-system';
 
 import NavBar from './NavBar';
 
 const Header = (props) => {
 
   const StyledHeader = styled.div `
+    width: 100vw;
+
     .header-logo {
       width: 300px;
       padding: 10px 30px;
     }
 
     .navbar {
-      float: right;
+      text-align: right;
       padding: 30px;
     }
   `
@@ -20,16 +24,25 @@ const Header = (props) => {
   const pages = ['donate', 'gallery', 'our work', 'who we are'];
 
   return (
-    <StyledHeader>
-      <img className="header-logo" src={props.logo} alt="logo" />
-
-      <div className="navbar">
-        <NavBar
-          children={pages}
-        />
-      </div>
-
-    </StyledHeader>
+    <Container>
+      <StyledHeader>
+        <Row>
+          <Col
+            xs={12} sm={12} md={6} lg={6} 
+          >
+            <img className="header-logo" src={props.logo} alt="logo" />
+          </Col>
+          <Col
+            className="navbar"
+            xs={12} sm={12} md={6} lg={6} 
+          >
+            <NavBar
+              children={pages}
+            />
+          </Col>
+        </Row>
+      </StyledHeader>
+    </Container>
   );
 }
 
