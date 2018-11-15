@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { colors } from './Assets/colors';
+import { colors } from './Assets/Assets';
 
 const NavBar = (props) => {
   const StyledNavBar = styled.ul`
