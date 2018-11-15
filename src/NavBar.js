@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { colors } from './Assets/colors';
+
 const NavBar = (props) => {
   const StyledNavBar = styled.ul`
     text-transform: uppercase;
@@ -11,7 +13,7 @@ const NavBar = (props) => {
   
     li {
       font-size: 12px;
-      color: rgb(40, 60, 15);
+      color: ${colors.blackBrown};
       display: inline;
       text-align: center;
       padding: 14px 16px;

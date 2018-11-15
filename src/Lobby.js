@@ -8,7 +8,7 @@ const Lobby = (props) => {
 
   const StyledLobby = styled.div`
     .content {
-      width: 80vw;
+      width: 960px;
       margin: auto;
     }
 

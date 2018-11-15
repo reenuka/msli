@@ -5,10 +5,11 @@ import Header from './Header';
 import Footer from './Footer';
 import Lobby from './Lobby';
 
-import logo from './logos/Version2_US.jpg';
-import homePic from './Images/DSCN2974.jpg';
+import logo from './Assets/logos/Version2_US.jpg';
+import homePic from './Assets/Images/DSCN2974.jpg';
 
 const App = () => {
+
   return (
     <div>
       <Header
