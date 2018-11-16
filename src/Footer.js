@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import { Container, Row, Col } from 'react-grid-system';
+
 import { colors } from './Assets/Assets';
 
 const Footer = (props) => {
+  
   const StyledFooter = styled.div`
-    width: 100vw;
-    color: colors.blackBrown;
+    color: ${colors.blackBrown}
     font-size: 12px;
 
     hr {

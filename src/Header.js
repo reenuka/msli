@@ -8,11 +8,9 @@ import NavBar from './NavBar';
 const Header = (props) => {
 
   const StyledHeader = styled.div `
-    width: 100vw;
-
     .header-logo {
       width: 300px;
-      padding: 10px 30px;
+      padding: 10px 30px 10px 0;
     }
 
     .navbar {

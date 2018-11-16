@@ -8,8 +8,11 @@ import Lobby from './Lobby';
 import logo from './Assets/logos/Version2_US.jpg';
 import homePic from './Assets/Images/DSCN2974.jpg';
 
-const App = () => {
+import { setConfiguration } from 'react-grid-system';
 
+setConfiguration({ gutterWidth: 0 });
+
+const App = () => {
   return (
     <div>
       <Header

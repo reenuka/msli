@@ -11,7 +11,6 @@ const Lobby = (props) => {
       width: 960px;
       margin: auto;
     }
-
   `
 
   return (
