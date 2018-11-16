@@ -13,10 +13,19 @@ const Picture = (props) => {
 
     .top-border {
       width: 110vw;
-      
+      position: absolute;
+      top: 40px;
+      left: -50px;
+      overflow: hidden;
+      z-index: 2;
     }
     .bottom-border {
       width: 110vw;
+      position: absolute;
+      top: 540px;
+      left: -50px;
+      overflow: hidden;
+      z-index: 2;
     }
   `
 

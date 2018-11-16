@@ -7,6 +7,8 @@ import Picture from './Picture';
 const Lobby = (props) => {
 
   const StyledLobby = styled.div`
+    z-index: 999;
+
     .content {
       width: 960px;
       margin: auto;

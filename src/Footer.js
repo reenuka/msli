@@ -8,6 +8,7 @@ import { colors } from './Assets/Assets';
 const Footer = (props) => {
   
   const StyledFooter = styled.div`
+    z-index: 999;
     color: ${colors.blackBrown}
     font-size: 12px;
 
