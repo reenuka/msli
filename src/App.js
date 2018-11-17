@@ -7,6 +7,7 @@ import Lobby from './Lobby';
 
 import logo from './Assets/logos/Version2_US.jpg';
 import homePic from './Assets/Images/DSCN2974.jpg';
+import whoWeAre from './Assets/Images/DSCN3750.jpg'
 
 import { setConfiguration } from 'react-grid-system';
 
@@ -21,6 +22,7 @@ const App = () => {
 
       <Lobby 
         backgroundPic={homePic}
+        whoWeAre={whoWeAre}
       />
       
       <Footer

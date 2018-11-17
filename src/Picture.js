@@ -6,35 +6,38 @@ import stroke from './Assets/Stroke.png'
 const Picture = (props) => {
   const StyledPic = styled.div`
     width: 100vw;
-    height: 500px;
+    height: 600px;
     background-image: url(${props.pic});
-    background-position: 50% 35%;
+    background-position: fixed;
     background-size: cover;
 
-    .top-border {
+    .clouds-top {
       width: 110vw;
-      position: absolute;
-      top: 40px;
+      align: center;
+      position: relative;
+      top: -50px;
       left: -50px;
+      opacity: 0.95;
       overflow: hidden;
-      z-index: 2;
     }
-    .bottom-border {
+    
+    .clouds-bottom {
       width: 110vw;
-      position: absolute;
-      top: 540px;
+      align: center;
+      position: relative;
+      top: 420px;
       left: -50px;
+      opacity: 0.95;
       overflow: hidden;
-      z-index: 2;
     }
   `
 
   return (
-    <div>
+    <div className="box">
       <StyledPic>
-      <img src={stroke} className="top-border" />
+      <img src={stroke} className="clouds-top" />
 
-      <img src={stroke} className="bottom-border" />
+      <img src={stroke} className="clouds-bottom" />
       </StyledPic>
     </div>
   );
