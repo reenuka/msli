@@ -15,13 +15,14 @@ const TextBox = (props) => {
 
     .text {
       line-height: 30px;
+      width: 300px;
+      
     }
 
-    &:after {
-      background-image: url(${ props.pic });
-      width: 100px;
-      height: 100px;
-      z-index: 5;
+    .image {
+      width: 500px;
+      display: inline-block;
+      transform: translate(${ (props.side === 'right') ? '-500px, -300px' : '500px, 100px' });
     }
   `
 
@@ -29,7 +30,6 @@ const TextBox = (props) => {
     <StyledTextBox className="text-box">
       <div className="title">
         {props.title}
-        <hr />
       </div>
       <div className="subtitle">
         {props.subtitle}
@@ -37,6 +37,7 @@ const TextBox = (props) => {
       <div className="text">
         {props.text}
       </div>
+      <img src={props.pic} className="image" />
     </StyledTextBox>
   );
 }
