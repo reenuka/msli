@@ -21,7 +21,7 @@ const Donate = (props) => {
           pic={donatePic}
         />
       </div>
-      <div className="content">
+      <div>
         <TextBox
           border={`right`}
           side={`left`}

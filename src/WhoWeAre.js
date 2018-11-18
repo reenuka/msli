@@ -21,7 +21,7 @@ const WhoWeAre = (props) => {
           pic={WhoWeArePic}
         />
       </div>
-      <div className="content">
+      <div>
         <TextBox
           border={`right`}
           side={`left`}

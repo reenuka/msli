@@ -1,0 +1,18 @@
+<Switch>
+  <Route exact path="/" component={Lobby} />
+  <Route exact path="/donate" component={Donate} />
+  <Route exact path="/gallery" component={Gallery} />
+  <Route exact path="/our-work" component={OurWork} />
+  <Route exact path="/who-we-are" component={WhoWeAre} />
+  <Route exact path="/who-we-are/meet-us" component={WWAMeetUs} />
+  <Route exact path="/who-we-are/history" component={WWAHistory} />
+  <Route exact path="/who-we-are/contact" component={WWAContact} />
+</Switch>
+
+import Donate from './Donate';
+import Gallery from './Gallery';
+import OurWork from './OurWork';
+import WhoWeAre from './WhoWeAre';
+import WWAContact from './WWAContact';
+import WWAHistory from './WWAHistory';
+import WWAMeetUs from './WWAMeetUs';

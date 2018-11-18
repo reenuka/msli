@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 import { colors } from './Assets/Assets';
 
@@ -30,7 +31,18 @@ const NavBar = (props) => {
 
   return (
     <StyledNavBar>
-      {props.children.map((child) => <li>{child}</li>)}
+      {
+        props.children.map((child) => {
+          return (
+            <li>
+              <Link 
+                to={props.pageRoutes[props.children.indexOf(child)]}
+              >
+                {child}
+              </Link>
+            </li>
+        )})
+      }
     </StyledNavBar>
   );
 }
