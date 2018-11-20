@@ -4,19 +4,19 @@ import styled from 'styled-components';
 import { colors } from './Assets/Assets';
 import TextBox from './TextBox';
 
-const WWAContact = (props) => {
+const OWFarmerGroups = (props) => {
 
-  const StyledWWAContact = styled.div`
+  const StyledOWFarmerGroups = styled.div`
   `
 
   return (
-    <StyledWWAContact>
-      Contact
+    <StyledOWFarmerGroups>
+      Farmer Groups
       <TextBox />
       <TextBox />
       <TextBox />
-    </StyledWWAContact>
+    </StyledOWFarmerGroups>
   );
 }
 
-export default WWAContact;
+export default OWFarmerGroups;

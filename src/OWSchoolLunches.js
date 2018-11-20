@@ -4,19 +4,19 @@ import styled from 'styled-components';
 import { colors } from './Assets/Assets';
 import TextBox from './TextBox';
 
-const WWAContact = (props) => {
+const OWSchoolLunches = (props) => {
 
-  const StyledWWAContact = styled.div`
+  const StyledOWSchoolLunches = styled.div`
   `
 
   return (
-    <StyledWWAContact>
-      Contact
+    <StyledOWSchoolLunches>
+      School Lunches
       <TextBox />
       <TextBox />
       <TextBox />
-    </StyledWWAContact>
+    </StyledOWSchoolLunches>
   );
 }
 
-export default WWAContact;
+export default OWSchoolLunches;

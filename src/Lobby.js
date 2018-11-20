@@ -1,14 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Switch, Route } from 'react-router-dom'
 
 import NavBar from './NavBar';
 import Picture from './Picture';
 import TextBox from './TextBox';
-import Donate from './Donate';
-import Gallery from './Gallery';
-import OurWork from './OurWork';
-import WhoWeAre from './WhoWeAre';
 
 import { colors } from './Assets/Assets';
 
@@ -56,14 +51,6 @@ const Lobby = (props) => {
 
   return (
     <StyledLobby>
-      <Switch>
-        {/* <Route exact path="/" component={Lobby} /> */}
-        <Route exact path="/donate" component={Donate} />
-        <Route exact path="/gallery" component={Gallery} />
-        <Route exact path="/our-work" component={OurWork} />
-        <Route exact path="/who-we-are" component={WhoWeAre} />
-      </Switch>
-
       <div className="background-pic">
         <Picture 
           pic={props.backgroundPic}

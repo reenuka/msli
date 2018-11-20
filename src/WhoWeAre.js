@@ -1,35 +1,51 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Switch, Route } from 'react-router-dom';
 
 import TextBox from './TextBox';
 import Picture from './Picture';
+import NavBar from './NavBar';
+import WWAContact from './WWAContact';
+import WWAHistory from './WWAHistory';
+import WWAMeetUs from './WWAMeetUs';
 
-import WhoWeArePic from './Assets/Images/DSCN3968.jpg';
+import whoWeArePic from './Assets/Images/DSCN3968.jpg';
 
 import { colors } from './Assets/Assets';
 
 const WhoWeAre = (props) => {
 
   const StyledWhoWeAre = styled.div`
+    .secondary-navigation {
+      align-items: center; 
     }
   `
+
+  const WWApages = ['meet us', 'history', 'contact'];
+  const WWApageRoutes = ['/who-we-are/meet-us', '/who-we-are/history', '/who-we-are/contact'];
 
   return (
     <StyledWhoWeAre>
       <div className="background-pic">
         <Picture
-          pic={WhoWeArePic}
+          pic={whoWeArePic}
         />
       </div>
+
+      <NavBar 
+        className='secondary-navigation'
+        children={WWApages}
+        pageRoutes={WWApageRoutes}
+      />
+
+      <Switch>
+        <Route exact path="/who-we-are/meet-us" component={WWAMeetUs} />
+        <Route exact path="/who-we-are/history" component={WWAHistory} />
+        <Route exact path="/who-we-are/contact" component={WWAContact} />
+      </Switch>
+
       <div>
-        <TextBox
-          border={`right`}
-          side={`left`}
-          width={`400px`}
-          title={`how you can help`}
-          subtitle={`subtitle`}
-          text={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper malesuada proin libero nunc consequat interdum varius sit amet. Lacinia at quis risus sed vulputate odio ut enim blandit. Faucibus in ornare quam viverra orci sagittis eu volutpat. Nulla facilisi cras fermentum odio eu feugiat pretium. Velit scelerisque in dictum non consectetur a erat nam at. Sed cras ornare arcu dui vivamus arcu. Eget velit aliquet sagittis id consectetur purus ut faucibus. A arcu cursus vitae congue mauris rhoncus. Donec et odio pellentesque diam volutpat commodo. Ultricies leo integer malesuada nunc.`}
-        />
+        Who we are text.
       </div>
     </StyledWhoWeAre>
   );

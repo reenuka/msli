@@ -1,36 +1,53 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Switch, Route } from 'react-router-dom';
 
 import TextBox from './TextBox';
 import Picture from './Picture';
+import NavBar from './NavBar';
+import OWSchoolLunches from './OWSchoolLunches';
+import OWFarmerGroups from './OWFarmerGroups';
+import OWComplimentaryInterventions from './OWComplimentaryInterventions';
 
-import ourWorkPic from './Assets/Images/DSCN3968.jpg';
+import OurWorkPic from './Assets/Images/DSCN3968.jpg';
 
 import { colors } from './Assets/Assets';
 
 const OurWork = (props) => {
 
   const StyledOurWork = styled.div`
+    .secondary-navigation {
+      align-items: center; 
     }
   `
+
+  const OWpages = ['complimentary interventions', 'farmer groups', 'school lunches'];
+  const OWpageRoutes = ['/our-work/complimentary-interventions', '/our-work/farmer-groups', '/our-work/school-lunches'];
 
   return (
     <StyledOurWork>
       <div className="background-pic">
         <Picture
-          pic={ourWorkPic}
+          pic={OurWorkPic}
         />
       </div>
-      <div>
-        <TextBox
-          border={`right`}
-          side={`left`}
-          width={`400px`}
-          title={`how you can help`}
-          subtitle={`subtitle`}
-          text={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper malesuada proin libero nunc consequat interdum varius sit amet. Lacinia at quis risus sed vulputate odio ut enim blandit. Faucibus in ornare quam viverra orci sagittis eu volutpat. Nulla facilisi cras fermentum odio eu feugiat pretium. Velit scelerisque in dictum non consectetur a erat nam at. Sed cras ornare arcu dui vivamus arcu. Eget velit aliquet sagittis id consectetur purus ut faucibus. A arcu cursus vitae congue mauris rhoncus. Donec et odio pellentesque diam volutpat commodo. Ultricies leo integer malesuada nunc.`}
-        />
-      </div>
+
+      <NavBar 
+        className='secondary-navigation'
+        children={OWpages}
+        pageRoutes={OWpageRoutes}
+      />
+
+      <Switch>
+        <Route exact path="/our-work/complimentary-interventions" component={OWComplimentaryInterventions} />
+        <Route exact path="/our-work/farmer-groups" component={OWFarmerGroups} />
+        <Route exact path="/our-work/school-lunches" component={OWSchoolLunches} />
+      </Switch>
+
+      <Picture />
+      <TextBox />
+      <Picture />
+      <TextBox />
     </StyledOurWork>
   );
 }
