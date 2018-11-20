@@ -4,7 +4,7 @@ import './App.css';
 
 import Header from './Header';
 import Footer from './Footer';
-import Lobby from './Lobby';
+import Home from './Home';
 import Donate from './Donate';
 import Gallery from './Gallery';
 import OurWork from './OurWork';
@@ -46,7 +46,7 @@ const App = () => {
         logo={logo}
         />
 
-      <Lobby 
+      <Home 
         backgroundPic={homePic}
         whoWeAre={whoWeAre}
       />
