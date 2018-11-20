@@ -1,13 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Switch, Route } from 'react-router-dom';
 
 import TextBox from './TextBox';
 import Picture from './Picture';
 import NavBar from './NavBar';
-import OWSchoolLunches from './OWSchoolLunches';
-import OWFarmerGroups from './OWFarmerGroups';
-import OWComplimentaryInterventions from './OWComplimentaryInterventions';
 
 import OurWorkPic from './Assets/Images/DSCN3968.jpg';
 
@@ -37,12 +33,6 @@ const OurWork = (props) => {
         children={OWpages}
         pageRoutes={OWpageRoutes}
       />
-
-      <Switch>
-        <Route exact path="/our-work/complimentary-interventions" component={OWComplimentaryInterventions} />
-        <Route exact path="/our-work/farmer-groups" component={OWFarmerGroups} />
-        <Route exact path="/our-work/school-lunches" component={OWSchoolLunches} />
-      </Switch>
 
       <Picture />
       <TextBox />

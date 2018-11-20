@@ -9,6 +9,12 @@ import Donate from './Donate';
 import Gallery from './Gallery';
 import OurWork from './OurWork';
 import WhoWeAre from './WhoWeAre';
+import OWSchoolLunches from './OWSchoolLunches';
+import OWFarmerGroups from './OWFarmerGroups';
+import OWComplimentaryInterventions from './OWComplimentaryInterventions';
+import WWAContact from './WWAContact';
+import WWAHistory from './WWAHistory';
+import WWAMeetUs from './WWAMeetUs';
 
 
 import logo from './Assets/logos/Version2_US.jpg';
@@ -28,6 +34,12 @@ const App = () => {
         <Route exact path="/gallery" component={Gallery} />
         <Route exact path="/our-work" component={OurWork} />
         <Route exact path="/who-we-are" component={WhoWeAre} />
+        <Route exact path="/our-work/complimentary-interventions" component={OWComplimentaryInterventions} />
+        <Route exact path="/our-work/farmer-groups" component={OWFarmerGroups} />
+        <Route exact path="/our-work/school-lunches" component={OWSchoolLunches} />
+        <Route exact path="/who-we-are/meet-us" component={WWAMeetUs} />
+        <Route exact path="/who-we-are/history" component={WWAHistory} />
+        <Route exact path="/who-we-are/contact" component={WWAContact} />
       </Switch>
 
       <Header
